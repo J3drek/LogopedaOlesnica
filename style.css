@@ -177,7 +177,52 @@ h3 {
   width: 65%;
   text-align: center;
   margin: 0 auto 0 auto;
-  padding: 200px 0 300px 0;
+  padding: 200px 0 0 0;
+}
+.therapy-kind {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding-bottom: 250px;
+}
+.arrow-downward {
+  width: 46px;
+  height: 46px;
+}
+.rotate {
+  transform: rotateZ(180deg);
+}
+.l-therapy--top {
+  display: flex;
+  background-color: #ffeb8c;
+  justify-content: space-around;
+  align-items: center;
+}
+.s-therapy--top {
+  display: flex;
+  background-color: #ffeb8c;
+  justify-content: space-around;
+  align-items: center;
+}
+.s-therapy {
+  margin-bottom: 200px;
+  padding-bottom: 200px;
+  height: 300px;
+}
+.l-therapy {
+  height: auto;
+}
+.s-therapy--content {
+  margin-bottom: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: justify;
+}
+.l-therapy--content {
+  margin-bottom: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: justify;
 }
 .abt--therapy h3 {
   font-family: "Patrick Hand", cursive;
@@ -191,6 +236,7 @@ h3 {
   cursor: pointer;
 }
 .Modal {
+  font-family: "Patrick Hand", cursive;
   display: block;
   position: fixed;
   left: 0;
@@ -205,9 +251,12 @@ h3 {
   overflow: auto;
   transition: all 0.5s linear;
 }
+.Modal a {
+  color: #000;
+}
 
 .Modal-content {
-  background-color: #fefefe;
+  background-color: #ffeb8c;
   margin: auto;
   padding: 20px;
   border-radius: 4px;
@@ -230,7 +279,7 @@ h3 {
 .Close {
   color: #aaaaaa;
   float: right;
-  font-size: 16px;
+  font-size: 40px;
 }
 
 .Close:hover,
@@ -341,18 +390,49 @@ h3 {
 /* }  */
 footer {
   text-align: center;
-  opacity: 0.4;
+  margin-top: 300px;
   font-weight: bold;
+  background-color: #ffeb8c;
+  padding-top: 100px;
 }
 footer a {
   text-decoration: none;
-  color: #000;
+  color: #ffeb8c;
   font-family: "Patrick Hand", cursive;
 }
 footer > a :hover {
   opacity: 1;
   text-decoration: solid black;
-  color: #000;
+}
+footer .year {
+  padding-top: 150px;
+}
+.desc {
+  opacity: 0.4;
+  margin-top: 100px;
+}
+.desc a {
+  color: black;
+  margin-bottom: 0;
+}
+.desc p {
+  margin-bottom: 0;
+}
+.hidden {
+  display: none;
+}
+.btn-contact {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  justify-content: space-around;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  color: #ffeb8c;
+  opacity: 1 !important;
 }
 
 /* CLASSES WHICH ARE ADDED TO ELEMENTS BT JS */
@@ -496,7 +576,7 @@ footer > a :hover {
   font-family: "Patrick Hand", cursive;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   .giph {
     width: 24px;
     height: 15px;
@@ -648,5 +728,33 @@ footer > a :hover {
      */
   .splide {
     margin: 0 2%;
+  }
+  .therapy-kind {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .s-therapy {
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    height: 300px;
+  }
+  .l-therapy {
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .s-therapy--content {
+    margin-bottom: 0;
+    background-color: white;
+    padding: 10px;
+    text-align: justify;
+  }
+  .l-therapy--content {
+    margin-bottom: 0;
+    background-color: white;
+    padding: 10px;
+    text-align: justify;
   }
 }

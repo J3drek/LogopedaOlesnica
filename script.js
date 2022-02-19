@@ -29,6 +29,7 @@ const slider = document.querySelector(".splide");
 const facts = document.querySelector(".Interesting--facts");
 const factsTarget = document.querySelector(".facts--div");
 const factsCloser = document.querySelector(".bars--container");
+const arrowDownward = document.querySelectorAll(".arrow-downward");
 
 window.addEventListener("load", function () {
   document.querySelector("body").style.opacity = "1";
@@ -88,41 +89,32 @@ observer.observe(starter);
 
 //SCROLLING
 therapyLink.addEventListener("click", function (event) {
-  event.preventDefault();
   scrolling(aboutTherapy);
 });
 
 therapyTitle.addEventListener("click", function (event) {
-  event.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
 galeria.addEventListener("click", function (event) {
-  event.preventDefault();
   scrolling(slider);
 });
 
 aboutBtn.addEventListener("click", function (event) {
-  event.preventDefault();
   scrolling(aboutTarget);
 });
 
 //MODAL WINDOW (FOR CONTACT)
 contact.addEventListener("click", function (event) {
-  document
-    .getElementById("myModal")
-    .classList.remove("is-hidden", "is-visuallyHidden");
-  main.classList.add("is-blurred");
+  document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
 });
 closeModal.addEventListener("click", function (event) {
-  event.preventDefault();
   document
     .querySelector(".Modal")
     .classList.add("is-hidden", "is-visuallyHidden");
   main.classList.remove("is-blurred");
 });
 arrow.addEventListener("click", function (event) {
-  event.preventDefault();
   scrolling(justTherapy);
 });
 
@@ -132,18 +124,29 @@ function myFunction(x) {
 }
 
 menuButton.addEventListener("click", function (event) {
-  event.preventDefault();
   menu.classList.toggle("hidden--menu");
 });
 
 //FACTS DIV
 facts.addEventListener("click", function (event) {
-  event.preventDefault();
   factsTarget.classList.remove("hidden--left");
 });
 
 factsCloser.addEventListener("click", function (event) {
   factsTarget.classList.add("hidden--left");
+});
+
+const sTherapy = document.querySelector(".s-therapy--content");
+const lTherapy = document.querySelector(".l-therapy--content");
+
+arrowDownward.forEach((x) => {
+  x.addEventListener("click", function (e) {
+    e.target.classList.toggle("rotate");
+    let tg = e.target.parentElement.parentElement.contains(sTherapy)
+      ? sTherapy
+      : lTherapy;
+    tg.classList.toggle("hidden");
+  });
 });
 
 //inserting images programmatically
