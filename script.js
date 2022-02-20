@@ -108,12 +108,7 @@ aboutBtn.addEventListener("click", function (event) {
 contact.addEventListener("click", function (event) {
   document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
 });
-closeModal.addEventListener("click", function (event) {
-  document
-    .querySelector(".Modal")
-    .classList.add("is-hidden", "is-visuallyHidden");
-  main.classList.remove("is-blurred");
-});
+
 arrow.addEventListener("click", function (event) {
   scrolling(justTherapy);
 });
@@ -125,15 +120,6 @@ function myFunction(x) {
 
 menuButton.addEventListener("click", function (event) {
   menu.classList.toggle("hidden--menu");
-});
-
-//FACTS DIV
-facts.addEventListener("click", function (event) {
-  factsTarget.classList.remove("hidden--left");
-});
-
-factsCloser.addEventListener("click", function (event) {
-  factsTarget.classList.add("hidden--left");
 });
 
 const sTherapy = document.querySelector(".s-therapy--content");

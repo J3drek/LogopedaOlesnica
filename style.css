@@ -147,6 +147,7 @@ h3 {
   width: 65%;
   height: 200px;
   display: flex;
+  text-align: center;
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
@@ -183,7 +184,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding-bottom: 250px;
+  padding-top: 80px;
+  border-top: 1px dotted gray 80%;
 }
 .arrow-downward {
   width: 46px;
@@ -207,7 +209,7 @@ h3 {
 .s-therapy {
   margin-bottom: 200px;
   padding-bottom: 200px;
-  height: 300px;
+  height: auto;
 }
 .l-therapy {
   height: auto;
@@ -234,6 +236,9 @@ h3 {
 
 .ter--title {
   cursor: pointer;
+}
+.top--title h3 {
+  font-size: 0.6rem;
 }
 .Modal {
   font-family: "Patrick Hand", cursive;
@@ -298,11 +303,16 @@ h3 {
   opacity: 0.6;
 }
 .abtMe {
+  border-top: 1px dotted gray;
   text-align: center;
   margin: 10%;
   padding: 150px 0 80px 0;
   border-top: 1px dotted #d4d4d4;
   border-bottom: 1px dotted #d4d4d4;
+  font-size: 1.2rem;
+}
+.abtMe ul {
+  text-align: left;
 }
 .abtMe h2 {
   font-family: "Patrick Hand", cursive;
@@ -406,6 +416,9 @@ footer > a :hover {
 }
 footer .year {
   padding-top: 150px;
+}
+footer p {
+  font-weight: 1000;
 }
 .desc {
   opacity: 0.4;
@@ -657,6 +670,10 @@ footer .year {
     text-align: left;
     padding-left: 4.1rem;
   }
+  .top--title h1 {
+    width: 100%;
+    font-size: 1.9rem;
+  }
   .top--title h3 {
     padding: 0 0 10px 0;
   }
@@ -680,6 +697,7 @@ footer .year {
   .changer {
     width: 80%;
     text-align: center;
+    font-size: 1rem;
   }
   .clicker {
     font-size: 0.8rem;
@@ -730,18 +748,19 @@ footer .year {
     margin: 0 2%;
   }
   .therapy-kind {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .s-therapy {
-    margin-bottom: 200px;
-    padding-bottom: 200px;
-    height: 300px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    height: auto;
   }
   .l-therapy {
-    height: auto;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -750,11 +769,13 @@ footer .year {
     background-color: white;
     padding: 10px;
     text-align: justify;
+    font-size: 1.4rem !important;
   }
   .l-therapy--content {
     margin-bottom: 0;
     background-color: white;
     padding: 10px;
     text-align: justify;
+    font-size: 1.4rem !important;
   }
 }
